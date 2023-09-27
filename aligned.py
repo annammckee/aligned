@@ -3,14 +3,17 @@
 #open file of interest
 file = open("aligned.fna")
 
-#read file contents into a variable
-contents = file.read()
+#read every other line in the fna file starting after the first header
+sequences = repr(file.readlines()[1::2])
+
 
 #close file to clear memory
 file.close()
 
 #print contents as a string to view whitespace
-print(repr(contents.splint("\n")))
+# print(repr(contents.split("\n")))
+# sequences = contents.readlines()[1::2]
+print(sequences)
 
 
 #create a string variable for each sequence
