@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 #open file of interest
-file = open("aligned.fna")
+file = open(sys.argv[1])
 
 #read every other line in the fna file starting after the first header -> returns a list
 fin = file.readlines()[1::2]
